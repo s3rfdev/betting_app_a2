@@ -125,7 +125,7 @@ class _MyAppState extends State<MyApp> {
               setState(() {
                 isVisible = true;
               });
-              controller.reload();
+             
             }
           } catch (e) {}
           setState(() {
