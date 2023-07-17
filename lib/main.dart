@@ -119,8 +119,11 @@ class _MyAppState extends State<MyApp> {
                 .promptUserForPushNotificationPermission()
                 .then((accepted) {});
 
-            var s = await controller.currentUrl();
-            if (s != null && s != webviewUrl && webviewUrl != '') {
+           var s = await controller.currentUrl();
+            s = Uri.parse(s!).host;
+            if (s != null &&
+                s != Uri.parse(webviewUrl).host &&
+                webviewUrl != '') {
               print('$s - $webviewUrl');
               setState(() {
                 isVisible = true;
