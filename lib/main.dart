@@ -39,7 +39,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  WebViewController controller = WebViewController();
+  WebViewController controller = WebViewController()..setJavaScriptMode(JavaScriptMode.unrestricted);
   bool isVisible = false;
   String initialHost = '';
   String webviewUrl = '';
